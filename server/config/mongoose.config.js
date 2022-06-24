@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const dbName = "noteDb";
 
-mongoose.connect("mongodb://localhost/" + dbName, { 
+mongoose.connect("mongodb+srv://xenofy:Senpou_23@cluster0.ykyzw.mongodb.net/?retryWrites=true&w=majority", { 
         useNewUrlParser: true,
         useUnifiedTopology: true
 

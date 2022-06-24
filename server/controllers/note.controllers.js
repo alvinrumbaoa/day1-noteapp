@@ -63,7 +63,7 @@ module.exports.updateNote = (req, res) => {   //Module to Update data/note HTTP 
 		})
 };
 
-// delete Note
+// delete Note HTTP REQUEST "DELETE"
 module.exports.deleteNote = (req, res) => {
 	console.log("inside deleteNote");
 	console.log(req.params.id);
