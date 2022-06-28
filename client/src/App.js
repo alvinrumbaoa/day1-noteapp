@@ -4,20 +4,36 @@ import Home from './components/Home'
 import CreateNote from './components/CreateNote'
 import UpdateNote from './components/UpdateNote'
 import About from './components/About'
-import { Routes,
+import {
+  BrowserRouter as Router,
+  Switch,
   Route,
+  Link
 } from "react-router-dom";
+
 function App() {
   return (
     <div className="App">
-       <Nav/>
+        <Nav/>
+      
        
-       <Routes>
-         <Route path="/" element={Home}/>
-         <Route path="/about" element={About}/>
-         <Route path="/new" element={CreateNote}/>
-         <Route path="/edit" element={UpdateNote}/>
-       </Routes>
+        <Switch>
+          <Route path="/">
+            <Home/>
+          </Route>
+          <Route path="/about">
+            <About/>
+          </Route>
+          <Route path="/new">
+            <CreateNote/>
+          </Route>
+          <Route path="/edit">
+            <UpdateNote/>
+          </Route>
+         
+        </Switch>
+      
+      
    </div>
   );
 }
