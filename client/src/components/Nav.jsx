@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box , Text, Heading, Hide, Show} from '@chakra-ui/react'
+import { Box , Text, Heading, Hide} from '@chakra-ui/react'
 import {Link, Outlet} from 'react-router-dom';
 const Nav = () => {
 	return (

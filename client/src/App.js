@@ -18,6 +18,7 @@ function App() {
             <Route path="about" element={<About/>}/>
             <Route path="create" element={<CreateNote/>}/>
             <Route path="*" element={<NoPage />} />
+            <Route path="/edit" element={<UpdateNote/>} />
           </Routes>
    
       </Flex>

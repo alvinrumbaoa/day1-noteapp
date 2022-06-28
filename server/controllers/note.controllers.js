@@ -18,7 +18,7 @@ module.exports.getAllNotes = (req, res) => {    //controller to fetch GET ALL no
 module.exports.createNotes =(req, res) =>{    //module to create POST notes 
 	console.log(req.body);
 
-	Notes.create(req.body)    //mongoose creating the data 
+	Note.create(req.body)    //mongoose creating the data 
 		.then((newNote) => { 
 				console.log(newNote);
 				res.json(newNote);
@@ -33,7 +33,7 @@ module.exports.getOneNote = (req, res) => {     //module to fetch or GET Notes
 	console.log("inside getOneNote");
 	console.log(req.params.id);
  
-	Notes.findById(req.params.id)     //function to search a note by ID
+	Note.findById(req.params.id)     //function to search a note by ID
 		.then((oneNote) => {
 			console.log(oneNote);
 			res.json(oneNote);
@@ -49,7 +49,7 @@ module.exports.updateNote = (req, res) => {   //Module to Update data/note HTTP 
 	console.log("inside updateNote");
 	console.log(req.params.id);  
 	console.log(req.body);      
-	Notes.findByIdAndUpdate(req.params.id, req.body, {
+	Note.findByIdAndUpdate(req.params.id, req.body, {
 		new: true,   
 		runValidators: true  
 	})
@@ -68,7 +68,7 @@ module.exports.deleteNote = (req, res) => {
 	console.log("inside deleteNote");
 	console.log(req.params.id);
 
-	Notes.findByIdAndDelete(req.params.id)
+	Note.findByIdAndDelete(req.params.id)
 		.then((deletedNote) => {
 			// this is the deleted document....your last chance!!!
 			console.log(deletedNote);
