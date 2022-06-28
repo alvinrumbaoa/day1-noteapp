@@ -5,7 +5,7 @@ import CreateNote from './components/CreateNote'
 import UpdateNote from './components/UpdateNote'
 import NoPage from './components/NoPage'
 import About from './components/About'
-import { Box, Flex, Heading, Text } from '@chakra-ui/react'
+import { Box, Flex} from '@chakra-ui/react'
 import { Routes, Route } from "react-router-dom";
 
 function App() {

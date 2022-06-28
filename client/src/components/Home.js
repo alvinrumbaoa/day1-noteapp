@@ -7,17 +7,17 @@ const Home = (props) => {
 
 	const [notes, setNotes] = useState("");
 
-// 	useEffect(() => {
-// 		axios.get("http://localhost:8000/api/notes")
-// 		.then((res) =>{
-// 				console.log(res.data);  
-// 				setNotes(res.data);  
+	useEffect(() => {
+		axios.get("http://localhost:8000/api/notes")
+		.then((res) =>{
+				console.log(res.data);  
+				setNotes(res.data);  
 			
-// 		})
-// 		.catch(err => { 
-// 			console.log(err.response);
-// 		})       
-// },[])
+		})
+		.catch(err => { 
+			console.log(err.response);
+		})       
+},[])
 
 
 	return (

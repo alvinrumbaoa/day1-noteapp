@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import axios from 'axios';
-import { Box , Heading,FormControl, FormLabel, FormHelperText, Input, Textarea, Button, Text}  from  '@chakra-ui/react'
+import { Box , Heading,FormControl,Input, Textarea, Button}  from  '@chakra-ui/react'
 const CreateNote = () => {
 
 	const [message, setMessage] = useState("");
