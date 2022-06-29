@@ -20,6 +20,7 @@ const CreateNote = () => {
                 .catch(err => { 
                         console.log(err.response);
                 })   
+
 	}
 
 
@@ -32,8 +33,8 @@ const CreateNote = () => {
 			
 
 			<FormControl onSubmit={createNoteHandler}>
-			    <Textarea mt={2} name="message" value={message} onChange ={(e) => setMessage(e.target.value)} />
-				<Input mt={2} name="creator" value={creator} onChange={(e) => setCreator(e.target.value)} />
+			    Message:<Textarea mt={2} name="message" value={message} onChange ={(e) => setMessage(e.target.value)} />
+				Creator:<Input isInvalid errorBorderColor='red.300' mt={2} name="creator" value={creator} onChange={(e) => setCreator(e.target.value)} />
 				<Button mt={2}  colorScheme="blue" type="submit">Submit</Button>
 			</FormControl>
 		</Box>

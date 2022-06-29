@@ -10,6 +10,8 @@ const Nav = () => {
 			<Text mt={2} fontWeight="bold"><Link to="/about">About</Link></Text>
 			<Text mt={2} fontWeight="bold"><Link to="/create">Create a New Note</Link></Text>
 			<Outlet />
+
+			
 		</Box>
 	
 	)
