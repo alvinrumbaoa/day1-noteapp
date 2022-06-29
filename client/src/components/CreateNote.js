@@ -32,11 +32,11 @@ const CreateNote = () => {
 			
 			
 
-			<FormControl onSubmit={createNoteHandler}>
-			    Message:<Textarea mt={2} name="message" value={message} onChange ={(e) => setMessage(e.target.value)} />
+			<form onSubmit={createNoteHandler}>
+			    Message:<Textarea font="2xl" mt={2} name="message" value={message} onChange ={(e) => setMessage(e.target.value)} />
 				Creator:<Input isInvalid errorBorderColor='red.300' mt={2} name="creator" value={creator} onChange={(e) => setCreator(e.target.value)} />
 				<Button mt={2}  colorScheme="blue" type="submit">Submit</Button>
-			</FormControl>
+			</form>
 		</Box>
 	)
 }
