@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Box}  from  '@chakra-ui/react'
 const DeleteNote = () => {
 	return (
-		<Box>
+		<Box justify="center">
 			<h1>Delete</h1>
 		</Box>
+
 	)
 }
 
