@@ -25,7 +25,7 @@ const Home = (props) => {
 
 
 	return (
-		<Box background="gray.100" p={10} w="100%">
+		<Box background="gray.100" p={10} h="auto" w="100%">
 			<Input  htmlSize={4} width='auto' w="50%" placeholder="Search for a Note"></Input>
 			<Flex display="flex" direction="row"  align="center" justify="space-between">
 			<Heading textAlign="center" p={10} >Welcome</Heading>

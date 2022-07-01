@@ -10,7 +10,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Box d="flex">
+    <Box h="100%" d="flex">
       <Flex>
         <Nav/>
           <Routes>
