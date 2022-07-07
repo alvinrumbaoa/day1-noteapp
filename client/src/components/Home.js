@@ -39,7 +39,7 @@ const Home = (props) => {
 						<GridItem  rowSpan={3} colSpan={1}>
 								<Link to="/edit/:id"><Text mb={2}>{getNotes.message}</Text></Link>
 								<Text mb={2}>{getNotes.creator}</Text>
-								<Button mr={2} colorScheme="facebook"><Link to="/" + getNotes._id +"/edit">Edit</Link></Button>
+								<Button mr={2} colorScheme="facebook"><Link to="/edit/{getNotes._id}">Edit</Link></Button>
 								<Button colorScheme="red">Delete</Button>
 						</GridItem>
 					</Box>	
