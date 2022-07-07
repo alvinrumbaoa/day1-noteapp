@@ -18,7 +18,7 @@ function App() {
             <Route path="about" element={<About/>}/>
             <Route path="create" element={<CreateNote/>}/>
             <Route path="*" element={<NoPage />} />
-            <Route path="/edit" element={<UpdateNote/>} />
+            <Route path="/:id/edit" element={<UpdateNote/>} />
           </Routes>
    
       </Flex>

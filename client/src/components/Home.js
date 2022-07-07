@@ -6,7 +6,7 @@ import axios from 'axios'
 
 
 const Home = (props) => {
-
+	const [id, setID] = useState({})
 	const [notes, setNotes] = useState([]);
 
 	const bgColor=["#CDF0EA", "#F9F9F9", "#F6C6EA", "#FAF4B7", "#CDC2AE", "#9A86A4", "#00FFAB" ,"#B1BCE6", "#B7E5DD", "#F1F0C0"]
@@ -39,7 +39,7 @@ const Home = (props) => {
 						<GridItem  rowSpan={3} colSpan={1}>
 								<Link to="/edit/:id"><Text mb={2}>{getNotes.message}</Text></Link>
 								<Text mb={2}>{getNotes.creator}</Text>
-								<Button mr={2} colorScheme="facebook">Edit</Button>
+								<Button mr={2} colorScheme="facebook"><Link to="/" + getNotes._id +"/edit">Edit</Link></Button>
 								<Button colorScheme="red">Delete</Button>
 						</GridItem>
 					</Box>	
