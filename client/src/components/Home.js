@@ -37,10 +37,12 @@ const Home = (props) => {
 				notes.map((getNotes, index) =>(
 					<Box key={index} p={10} m={2} background={bgColor[index]} justify="center" h='200px' boxShadow=" 2px 5px 10px black" borderRadius={20} >
 						<GridItem  rowSpan={3} colSpan={1}>
-								<Link to="/edit/:id"><Text mb={2}>{getNotes.message}</Text></Link>
+								{getNotes._id}
+								<Link to={`notes/${getNotes._id}/edit`}><Text mb={2}>{getNotes.message}</Text>
 								<Text mb={2}>{getNotes.creator}</Text>
-								<Button mr={2} colorScheme="facebook"><Link to="/edit/{getNotes._id}">Edit</Link></Button>
+								<Button mr={2} colorScheme="facebook"><Link to={`notes/${getNotes._id}/edit`}>Edit</Link></Button>
 								<Button colorScheme="red">Delete</Button>
+								</Link>
 						</GridItem>
 					</Box>	
 				
@@ -55,3 +57,4 @@ const Home = (props) => {
 }
 
 export default Home;
+ 

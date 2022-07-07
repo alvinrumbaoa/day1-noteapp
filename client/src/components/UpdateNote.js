@@ -10,6 +10,7 @@ const UpdateNote = (props) => {
 
 	useEffect (() =>{
 		axios.get('http://localhost:8000/api/notes/' + props.id)
+	
 		.then((res) =>{
 			let noteDb = res.data;
 			setID(noteDb._id);
@@ -23,6 +24,7 @@ const UpdateNote = (props) => {
 	}, [props.id])
 
 	const updateNoteHandler = (e) => {
+		e.preventDefault(); 
 	    axios.put("http://localhost:8000/api/notes" + props.id, {
                         message: message,
 						creator: creator,

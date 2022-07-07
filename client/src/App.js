@@ -4,6 +4,7 @@ import Home from './components/Home'
 import CreateNote from './components/CreateNote'
 import UpdateNote from './components/UpdateNote'
 import NoPage from './components/NoPage'
+import Notes  from './components/Notes'
 import About from './components/About'
 import { Box, Flex} from '@chakra-ui/react'
 import { Routes, Route } from "react-router-dom";
@@ -16,9 +17,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="about" element={<About/>}/>
-            <Route path="create" element={<CreateNote/>}/>
+            <Route path="/notes/create" element={<CreateNote/>}/>
+            <Route path="/notes/:id" element={<Notes/>} />
+            <Route path="/notes/:id/edit" element={<UpdateNote/>} />
             <Route path="*" element={<NoPage />} />
-            <Route path="/:id/edit" element={<UpdateNote/>} />
+          
           </Routes>
    
       </Flex>
